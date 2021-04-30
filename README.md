@@ -43,11 +43,11 @@ main().then(() => process.exit())
 
 ## Status
 
+- [x] Basic Node implementation using [undici-fetch][uf] for `fetch()`
 - [ ] Write comprehensive test suite based on [node-tap](https://node-tap.org/).
 - [ ] Write comprehensive usage examples for [`fastify-api`][fa] and [`fastify-vite`][fv]
 - [ ] Optimize `applyParams()` implementation with new **fast-apply-params** package
 - [ ] Memoize `Proxy` instances on the client, prepopulate all wrappers on the server
-- [ ] Use [undici-fetch][uf] as the Node `fetch()` implementation
 
 [fa]: https://github.com/galvez/fastify-api
 [fv]: https://github.com/galvez/fastify-vite
