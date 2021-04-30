@@ -4,6 +4,12 @@ A simple manifest-based [`fetch()`](https://fetch.spec.whatwg.org/) API client b
 
 It is obvious in the sense it uses a staightforward, _**nearly obvious**_ pattern to **automatically build API clients from route definitions in a minimalist manifest**. Write your API code once, automatically get API clients.
 
+## Install
+
+```
+$ npm i manifetch --save
+```
+
 ## Usage
 
 ```js
