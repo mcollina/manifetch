@@ -1,8 +1,8 @@
-function ofetch (instance) {
+function manifetch (instance) {
   return getFetchWrapper.bind(instance)
 }
 
-module.exports = ofetch
+module.exports = manifetch
 
 function getFetchWrapper (methods, method) {
   if (method in methods) {

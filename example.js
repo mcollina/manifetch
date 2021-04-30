@@ -1,8 +1,8 @@
 const fetch = require('undici-fetch')
-const ofetch = require('./index')
+const manifetch = require('./index')
 
 const prefix = 'https://jsonplaceholder.typicode.com'
-const get = ofetch({ fetch, prefix })
+const get = manifetch({ fetch, prefix })
 
 const manifest = {
   getPosts: ['GET', '/posts'],

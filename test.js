@@ -23,7 +23,7 @@ const tenthPost = {
     'quos veniam quod sed accusamus veritatis error'
 }
 
-tap.test('ofetch', async (t) => {
+tap.test('manifetch', async (t) => {
   t.plan(2)
 
   const { client, posts, post } = await main(true)

@@ -1,6 +1,6 @@
-# ofetch
+# manifetch
 
-An _obvious_ [`fetch()`](https://fetch.spec.whatwg.org/) API client utility.
+A simple manifest-based [`fetch()`](https://fetch.spec.whatwg.org/) API client building utility.
 
 It is obvious in the sense it uses a staightforward, _**nearly obvious**_ pattern to **automatically build API clients from route definitions in a minimalist manifest**. Write your API code once, automatically get API clients.
 
@@ -8,10 +8,10 @@ It is obvious in the sense it uses a staightforward, _**nearly obvious**_ patter
 
 ```js
 const fetch = require('undici-fetch')
-const ofetch = require('ofetch')
+const manifetch = require('manifetch')
 
 const prefix = 'https://jsonplaceholder.typicode.com'
-const get = ofetch({ fetch, prefix })
+const get = manifetch({ fetch, prefix })
 
 const manifest = {
   getPosts: ['GET', '/posts'],

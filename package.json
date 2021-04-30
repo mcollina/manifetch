@@ -4,7 +4,7 @@
     "test": "tap test.js"
   },
   "bugs": {
-    "url": "https://github.com/terix-framework/ofetch/issues"
+    "url": "https://github.com/terixjs/manifetch/issues"
   },
   "bundleDependencies": false,
   "deprecated": false,
@@ -13,13 +13,13 @@
     "index.js",
     "README.md"
   ],
-  "homepage": "https://github.com/terix-framework/ofetch",
+  "homepage": "https://github.com/terixjs/manifetch",
   "license": "MIT",
   "main": "index.js",
-  "name": "ofetch",
+  "name": "manifetch",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terix-framework/ofetch.git"
+    "url": "git+https://github.com/terixjs/manifetch.git"
   },
   "version": "0.0.1",
   "devDependencies": {
