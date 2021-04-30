@@ -34,6 +34,11 @@ async function main () {
 main().then(() => process.exit())
 ```
 
+See also [example][example] and [test][test].
+
+[example]: https://github.com/terixjs/manifetch/blob/main/example.js
+[test]: https://github.com/terixjs/manifetch/blob/main/test.js
+
 ## Goals
 
 - [ ] **Work seamlessly** on **Node**, **Deno** and **on the browser**
