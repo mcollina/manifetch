@@ -7,7 +7,11 @@ It is obvious in the sense it uses a staightforward, _**nearly obvious**_ patter
 ## Usage
 
 ```js
+const fetch = require('undici-fetch')
 const ofetch = require('ofetch')
+
+const prefix = 'https://jsonplaceholder.typicode.com'
+const get = ofetch({ fetch, prefix })
 
 const manifest = {
   getPosts: ['GET', '/posts'],
@@ -18,20 +22,16 @@ const manifest = {
   },
 }
 
-const get = ofetch({
-  prefixUrl: 'https://jsonplaceholder.typicode.com/',
-})
-
 const client = new Proxy(manifest, { get })
 
 async function main () {
   const { json: posts } = await client.getPosts()
-  const { json: post } = await client.getPost(1)
-  console.log('posts', posts)
-  console.log('post', post)
+  const { json: post } = await client.getPost({ id: 10 })
+  console.log('First post out of collection:', posts[0])
+  console.log('Tenth post, individually requested', post)
 }
 
-main()
+main().then(() => process.exit())
 ```
 
 ## Goals

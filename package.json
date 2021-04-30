@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "lint": "eslint . --ext js --fix",
+    "test": "tap test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/terix-framework/ofetch/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "An obvious fetch() API client utility",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "homepage": "https://github.com/terix-framework/ofetch",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "ofetch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terix-framework/ofetch.git"
+  },
+  "version": "0.0.1",
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "tap": "^14.11.0"
+  },
+  "dependencies": {
+    "undici-fetch": "^0.2.0"
+  }
+}

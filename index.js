@@ -15,8 +15,8 @@ function getFetchWrapper (methods, method) {
       return async (params, options = {}) => {
         options.method = httpMethod
         // eslint-disable-next-line no-undef
-        const response = await fetch(`${
-          this.prefixUrl
+        const response = await this.fetch(`${
+          this.prefix
         }${
           applyParams(path, params)
         }`, options)
@@ -32,7 +32,7 @@ function getFetchWrapper (methods, method) {
       return async (options = {}) => {
         options.method = httpMethod
         // eslint-disable-next-line no-undef
-        const response = await fetch(`${this.prefixUrl}${path}`, options)
+        const response = await this.fetch(`${this.prefix}${path}`, options)
         const body = await response.text()
         return {
           body,
@@ -56,7 +56,11 @@ function applyParams (template, params) {
       }
     })
   } catch (err) {
-    return null
+    if (err === null) {
+      return err
+    } else {
+      throw err
+    }
   }
 }
 
