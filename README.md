@@ -2,7 +2,7 @@
 
 A simple manifest-based [`fetch()`](https://fetch.spec.whatwg.org/) API client building utility.
 
-It is obvious in the sense it uses a staightforward, _**nearly obvious**_ pattern to **automatically build API clients from route definitions in a minimalist manifest**. Write your API code once, automatically get API clients.
+It is obvious in the sense it uses a staightforward, _**nearly obvious**_ pattern to **automatically build API clients from route definitions in a minimalist manifest**. Conceived originally as part of [`fastify-api`](https://github.com/galvez/fastify-api), which already provides a manifest compatible with `manifetch` based on your API route definitions.
 
 ## Install
 
