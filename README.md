@@ -2,7 +2,7 @@
 
 An _obvious_ [`fetch()`](https://fetch.spec.whatwg.org/) wrapper.
 
-It is obvious in the sense it uses a staightforward, nearly obvious pattern to **automatically build API clients from route definitions in a minimalist manifesto**. Write your API code once, automatically get API clients without necessarily having to rely on the [draconian OpenAPI specification](https://swagger.io/docs/specification/basic-structure/) — although the plan is to also provide a simple migration path to the more elaborate, type-precise specification when needed.
+It is obvious in the sense it uses a staightforward, _**nearly obvious**_ pattern to **automatically build API clients from route definitions in a minimalist manifesto**. Write your API code once, automatically get API clients.
 
 ## Usage
 
