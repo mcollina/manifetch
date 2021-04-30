@@ -1,14 +1,25 @@
+function ofetch (instance) {
+  return getFetchWrapper.bind(instance)
+}
+
+module.exports = ofetch
+
 function getFetchWrapper (methods, method) {
   if (method in methods) {
     if (Array.isArray(!methods[method]) && typeof methods[method] === 'object') {
-      return new Proxy(methods[method], { get: getFetchWrapper })
+      return new Proxy(methods[method], { get: getFetchWrapper.bind(this) })
     }
-    const hasParams = methods[method][1].match(/\/:(\w+)/)
+    const [httpMethod, path] = methods[method]
+    const hasParams = path.match(/\/:(\w+)/)
     if (hasParams) {
       return async (params, options = {}) => {
-        options.method = methods[method][0]
+        options.method = httpMethod
         // eslint-disable-next-line no-undef
-        const response = await fetch(applyParams(methods[method][1], params), options)
+        const response = await fetch(`${
+          this.prefixUrl
+        }${
+          applyParams(path, params)
+        }`, options)
         const body = await response.text()
         return {
           body,
@@ -19,9 +30,9 @@ function getFetchWrapper (methods, method) {
       }
     } else {
       return async (options = {}) => {
-        options.method = methods[method][0]
+        options.method = httpMethod
         // eslint-disable-next-line no-undef
-        const response = await fetch(methods[method][1], options)
+        const response = await fetch(`${this.prefixUrl}${path}`, options)
         const body = await response.text()
         return {
           body,
@@ -33,8 +44,6 @@ function getFetchWrapper (methods, method) {
     }
   }
 }
-
-module.exports = { getFetchWrapper }
 
 function applyParams (template, params) {
   try {

@@ -1,15 +1,15 @@
 # ofetch
 
-An _obvious_ [`fetch()`](https://fetch.spec.whatwg.org/) wrapper.
+An _obvious_ [`fetch()`](https://fetch.spec.whatwg.org/) API client utility.
 
-It is obvious in the sense it uses a staightforward, _**nearly obvious**_ pattern to **automatically build API clients from route definitions in a minimalist manifesto**. Write your API code once, automatically get API clients.
+It is obvious in the sense it uses a staightforward, _**nearly obvious**_ pattern to **automatically build API clients from route definitions in a minimalist manifest**. Write your API code once, automatically get API clients.
 
 ## Usage
 
 ```js
 const ofetch = require('ofetch')
 
-const manifesto = {
+const manifest = {
   getPosts: ['GET', '/posts'],
   getPost: ['GET', '/posts/:id'],
   nestedDemonstration: {
@@ -38,8 +38,8 @@ main()
 
 - [ ] **Work seamlessly** on **Node**, **Deno** and **on the browser**
 - [x] Facilitate `fetch()` usage with **minor**, **sensible API enhancements**
-- [x] **Automatically** construct API clients based on a **minimalist API manifesto**
-- [ ] Support both a **minimalist manifesto** and the **OpenAPI specification** 
+- [x] **Automatically** construct API clients based on a **minimalist API manifest**
+- [ ] Support both a **minimalist manifest** and the **OpenAPI specification** 
 
 ## Status
 
