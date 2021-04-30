@@ -8,7 +8,7 @@
   },
   "bundleDependencies": false,
   "deprecated": false,
-  "description": "An obvious fetch() API client utility",
+  "description": "A simple manifest-based fetch() API client building utility.",
   "files": [
     "index.js",
     "README.md"
