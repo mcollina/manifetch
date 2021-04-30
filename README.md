@@ -36,10 +36,10 @@ main()
 
 ## Goals
 
-- Facilitate `fetch()` usage with **minor**, **sensible API enhancements**
-- **Automatically** construct API clients based on a **minimalist API manifesto**
-- **Work seamlessly** on **Node**, **Deno** and **on the browser**
-- Support both a **minimalist manifesto** and the **OpenAPI specification** 
+- [ ] **Work seamlessly** on **Node**, **Deno** and **on the browser**
+- [x] Facilitate `fetch()` usage with **minor**, **sensible API enhancements**
+- [x] **Automatically** construct API clients based on a **minimalist API manifesto**
+- [ ] Support both a **minimalist manifesto** and the **OpenAPI specification** 
 
 ## Status
 
@@ -47,10 +47,11 @@ main()
 - [ ] Write comprehensive usage examples for [`fastify-api`][fa] and [`fastify-vite`][fv]
 - [ ] Optimize `applyParams()` implementation with new **fast-apply-params** package
 - [ ] Memoize `Proxy` instances on the client, prepopulate all wrappers on the server
-- [ ] Use [undici-fetch](https://github.com/Ethan-Arrowood/undici-fetch) on Node
+- [ ] Use [undici-fetch][uf] as the Node `fetch()` implementation
 
 [fa]: https://github.com/galvez/fastify-api
 [fv]: https://github.com/galvez/fastify-vite
+[uf]: https://github.com/Ethan-Arrowood/undici-fetch
 
 ## License
 
