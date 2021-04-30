@@ -1,5 +1,5 @@
 const fetch = require('undici-fetch')
-const ofetch = require('ofetch')
+const ofetch = require('./index')
 
 const prefix = 'https://jsonplaceholder.typicode.com'
 const get = ofetch({ fetch, prefix })
@@ -22,7 +22,7 @@ async function main (test = false) {
     console.log('First post out of collection:', posts[0])
     console.log('Tenth post, individually requested', post)
   }
-  return { posts, post }
+  return { client, posts, post }
 }
 
 module.exports = main

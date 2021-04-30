@@ -6,7 +6,7 @@ module.exports = ofetch
 
 function getFetchWrapper (methods, method) {
   if (method in methods) {
-    if (Array.isArray(!methods[method]) && typeof methods[method] === 'object') {
+    if (!Array.isArray(methods[method]) && typeof methods[method] === 'object') {
       return new Proxy(methods[method], { get: getFetchWrapper.bind(this) })
     }
     const [httpMethod, path] = methods[method]
