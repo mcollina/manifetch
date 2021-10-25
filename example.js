@@ -1,4 +1,4 @@
-const fetch = require('undici-fetch')
+const { fetch } = require('fetch-undici')
 const manifetch = require('./index')
 
 const prefix = 'https://jsonplaceholder.typicode.com'
