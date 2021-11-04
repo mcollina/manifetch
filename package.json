@@ -11,6 +11,7 @@
   "description": "A simple manifest-based fetch() API client building utility.",
   "files": [
     "index.js",
+    "index.mjs",
     "README.md"
   ],
   "homepage": "https://github.com/terixjs/manifetch",
@@ -21,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/terixjs/manifetch.git"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "devDependencies": {
     "eslint": "^7.22.0",
     "eslint-config-standard": "^16.0.2",
