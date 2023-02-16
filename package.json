@@ -29,7 +29,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "fetch-undici": "^1.0.5",
+    "fetch-undici": "^3.0.1",
     "tap": "^14.11.0"
   }
 }
